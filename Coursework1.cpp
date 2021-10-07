@@ -28,7 +28,15 @@ void Data_editor::printDataStructure() {
         while (currHEAD != nullptr) {
             currITEM = (ITEM3*)currHEAD->pItems;
             while (currITEM != nullptr) {
-                printf("%c%c | NO.%3d | ID: %32s | CODE: %15d | TIME: %2d:%2d:%2d\n", char('A' + i), currHEAD->cBegin, counter + 1, currITEM->pID, currITEM->Code, currITEM->Time.Hour, currITEM->Time.Hour, currITEM->Time.Sec);
+                printf("%c%c | NO.%3d | ID: %32s | CODE: %15d | TIME: %2d:%2d:%2d\n",
+		       char('A' + i),
+		       currHEAD->cBegin,
+		       counter + 1,
+		       currITEM->pID,
+		       currITEM->Code,
+		       currITEM->Time.Hour,
+		       currITEM->Time.Hour,
+		       currITEM->Time.Sec);
                 counter++;
                 currITEM = currITEM->pNext;
             }
